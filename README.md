@@ -46,7 +46,7 @@ Now you can install this package by following these steps:
 
 4. Find the path to the the unzipped folder from step 2. If you unzipped to your desktop, the path will be something like the following:
 
- - ** Windows**: "C:/Users/MyUsername/Desktop/intonation-master/"
+ - **Windows**: "C:/Users/MyUsername/Desktop/intonation-master/"
 
  - **Mac**: "/Users/MyUsername/Desktop/intonation-master/"
 
