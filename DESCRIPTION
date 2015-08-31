@@ -1,0 +1,17 @@
+Package: intonation
+Type: Package
+Title: Linguistic analysis of speech fundamental frequency
+Version: 1.0
+Date: 2015-08-31
+Author: Aaron Albin
+Maintainer: Aaron Albin <usagi5886@hotmail.com>
+Description: This package consists of the functions used in Albin (2015)
+  for various tasks relating to speech fundamental frequency (F0), including
+  (1) manipulating Pitch objects from the phonetics software Praat,
+  (2) visualizing F0 data in a way that retains rich information from the signal, and
+  (3) creating and plotting a schematic quantitative representation of an F0 track.
+License: GPL (>= 3)
+URL: https://github.com/usagi5886/intonation
+Imports:
+  audio,
+  PraatR

@@ -1,0 +1,9 @@
+citHeader("When citing this package, please cite Chapter 3 of the following dissertation (formatting as necessary):")
+
+bibentry(bibtype = "PhdThesis",
+         author = person("Aaron", "Albin"),
+         year = "2015",
+         title = "Typologizing native language influence on intonation in a second language: Three transfer phenomena in Japanese EFL learners",
+         school = "Indiana University",
+         address = "Bloomington",
+         url = "{http://hdl.handle.net/2022/20345")
