@@ -100,6 +100,9 @@ VoicedUnvoicedCost=0.14
 
 ){ # End argument list, and begin body of function definition
 
+# Require the PraatR package
+require("PraatR")
+
 # Check to make sure none of the required arguments are missing:
 MissingCheck = missing(Input) | missing(Output) | missing(Range)
 if( MissingCheck ){

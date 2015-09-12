@@ -80,6 +80,8 @@ Spectrogram_col=c("white","grey75"), # Defaults to a faded grayscale (to ensure 
 
 ){ # End argument list; Begin body of actual function
 
+# Require audio package (for load.wave() function down below)
+require("audio")
 
 ####################
 # Input validation #

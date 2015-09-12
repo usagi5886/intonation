@@ -82,6 +82,9 @@ nSeeds=10 # Number of seeds (initialization candidates) for exploring the search
 
 ){ # End argument list; begin main function body
 
+# Require audio package (for load.wave() and play() functions down below)
+require("audio")
+
 #_______________________#
 # BRING IN PITCH OBJECT #
 
@@ -226,14 +229,17 @@ if(missing(VertexIndices)){ # i.e. if the vertices need to be obtained from the 
 			AudioObject = audio:::load.wave(WavePath)
 			# Note: The load.wave() function comes from the 'audio' package (a dependency for this package)
 
+			# Determine sample rate
+			SampleRate = attributes(AudioObject)$rate
+
 			# Start the playing from wherever the last click was
-			StartPoint = round( Time_ms[NewPoint]/1000 * AudioObject$rate )
+			StartPoint = round( Time_ms[NewPoint]/1000 * SampleRate )
 
 			# Play either to:
 			#   1) the last click plus the requested clip duration, or
 			#   2) to the end of the file -
 			# whichever comes first.
-			EndPoint = min( c( StartPoint+ AudioObject$rate * PlayDuration_ms/1000), # (1)
+			EndPoint = min( c( StartPoint+ SampleRate * PlayDuration_ms/1000), # (1)
 			                   length(AudioObject) # (2)
 			              ) # End min()
 
@@ -243,7 +249,7 @@ if(missing(VertexIndices)){ # i.e. if the vertices need to be obtained from the 
 
 			# To avoid a bug in playing audio on some systems, add a half-second of zero-padding to the end of the audio
 			if(ZeroPad){
-				ZeroPadding = rep(0,times=AudioObject$rate/2)
+				ZeroPadding = rep(0,times=SampleRate/2)
 				ZeroPadded = append(AudioClip,ZeroPadding)
 				attributes(ZeroPadded) <- attributes(AudioObject)
 			}else{ # i.e. if the audio should *not* be zero padded
@@ -255,7 +261,7 @@ if(missing(VertexIndices)){ # i.e. if the vertices need to be obtained from the 
 			# Note: The play() function comes from the 'audio' package (a dependency for this package)
 
 			# Tell R to pause ('sleep') while the audio is playing (to help prevent crashing).
-			Sys.sleep(length(ZeroPadded)/AudioObject$rate)
+			Sys.sleep(length(ZeroPadded)/SampleRate)
 
 		} # End 'if WavePath is provided'
 
