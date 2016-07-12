@@ -19,8 +19,8 @@
 	\tabular{ll}{
 	Package: \tab intonation\cr
 	Type: \tab Package\cr
-	Version: \tab 1.0\cr
-	Date: \tab 2015-08-31\cr
+	Version: \tab 1.1\cr
+	Date: \tab 2016-07-12\cr
 	License: \tab GNU General Public License (Version 3 or later)\cr
 	Imports: \tab audio, PraatR\cr
 }
@@ -35,7 +35,7 @@ Aaron Albin (\url{http://www.aaronalbin.com/})
 }
 
 \note{
-	This package has two dependencies: \href{https://cran.r-project.org/web/packages/audio/index.html}{audio} and \href{http://www.aaronalbin.com/praatr/}{PraatR}. To install the latter, follow the steps under "Installation" on the PraatR homepage. (Note, however, that that only function in this package relying on PraatR is \code{\link{ToPitch}}.)
+	This package has two dependencies: \href{https://cran.r-project.org/web/packages/audio/index.html}{audio} and \href{http://www.aaronalbin.com/praatr/}{PraatR}. To install the latter, follow the steps under "Installation" on the PraatR homepage. (Note, however, that that only functions in this package relying on PraatR are \code{\link{ToPitch}} and \code{\link{F0RangeFinder}}.)
 }
 
 \seealso{
@@ -43,6 +43,7 @@ In addition to some sample data (\code{\link{HelloWorld}}), the package includes
 
 	\tabular{ll}{
 		\code{\link{Spectrogram}} \tab Create a spectrogram of an audio file\cr
+		\code{\link{F0RangeFinder}} \tab Cycle through each soundfile in a folder and determine F0 range for each\cr
 		\code{\link{ToPitch}} \tab Use Praat to generate a Pitch object\cr
 		\code{\link{ReadPitch}} \tab Read a Pitch object into R\cr
 		\code{\link{RichVisualization}} \tab Visualize the F0 data in a Pitch object\cr

@@ -49,7 +49,7 @@ ReadPitch( File, Return = "Frames" )
 }
 
 \seealso{
-	This function is called from within \code{\link{RichVisualization}} in order to generate the F0 track in the center panel.
+	This function is called from within \code{\link{RichVisualization}} and \code{\link{F0RangeFinder}} in order to generate the F0 tracks.
 	For creating Pitch objects in the first place, see \code{\link{ToPitch}}.
 }
 

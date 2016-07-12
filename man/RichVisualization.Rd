@@ -89,7 +89,7 @@ RichVisualization( PitchPath,
 }
 
 \seealso{
-	This function uses \code{\link{ReadPitch}} to generate the F0 track (center panel) and \code{\link{Spectrogram}} to generate the segmentation (bottom panel). Once a rich visualization plot has been created, a stylization can be created with \code{\link{Stylize}} and then plotted with \code{\link{PlotStylization}}.
+	This function uses \code{\link{ReadPitch}} to generate the F0 track (center panel) and \code{\link{Spectrogram}} to generate the segmentation (bottom panel). Once a rich visualization plot has been created, a stylization can be created with \code{\link{Stylize}} and then plotted with \code{\link{PlotStylization}}. Note also that the same kind of rich visualziation representation is used in \code{\link{F0RangeFinder}}.
 }
 
 \examples{

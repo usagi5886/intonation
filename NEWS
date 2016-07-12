@@ -1,4 +1,7 @@
 NEWS in package 'intonation'
 
+1.1	07-12-2016
+    o	Added F0RangeFinder() function
+
 1.0	08-30-2015
     o	Initial public release

@@ -2,7 +2,7 @@
 
 ### [R](https://www.r-project.org/) package for the linguistic analysis of fundamental frequency (F0) in speech
 
-Version 1.0 (August 31, 2015)
+Version 1.1 (July 12, 2016)
 
 *[Aaron Albin](http://www.aaronalbin.com/)*
 
@@ -75,6 +75,7 @@ Once installed, type *?intonation* at the R console to pull up the help file for
 In addition to some sample data ([HelloWorld](https://github.com/usagi5886/intonation/blob/master/inst)), the package includes the following functions
 
  - [Spectrogram()](https://github.com/usagi5886/intonation/blob/master/R/Spectrogram.r): Create a spectrogram of an audio file
+ - [F0RangeFinder()](https://github.com/usagi5886/intonation/blob/master/R/F0RangeFinder.r): Cycle through each soundfile in a folder and determine F0 range for each
  - [ToPitch()](https://github.com/usagi5886/intonation/blob/master/R/ToPitch.r): Use Praat to generate a Pitch object
  - [ReadPitch()](https://github.com/usagi5886/intonation/blob/master/R/ReadPitch.r): Read a Pitch object into R
  - [RichVisualization()](https://github.com/usagi5886/intonation/blob/master/R/RichVisualization.r): Visualize the F0 data in a Pitch object
@@ -90,7 +91,11 @@ R documentation 'help files' are available for every function, but the following
     # Draw a spectrogram of the audio data in a soundfile
     Spectrogram(WavePath)
 
-    # Create a Pitch object from this soundfile
+    # Quickly determine F0 range for every soundfile in one folder (WaveFolder)
+    # Save the resulting pitch-related files in another folder (PitchFolder)
+	F0Ranges = F0RangeFinder( WaveFolder="C:/Wave/", PitchFolder="C:/Pitch/")
+
+    # Use an F0 range thus determined to create a Pitch object from this soundfile
     ToPitch( Input=WavePath, Output=PitchPath, Range=c(69,135) )
 
     # Read this Pitch object into R

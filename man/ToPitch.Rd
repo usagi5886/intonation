@@ -6,7 +6,7 @@
 }
 
 \description{
-	This function takes a soundfile, conducts an F0 analysis, and produces a Praat-format Pitch object using various customizable analysis parameters. As such, this function serves as a high-level interface to Praat's "Sound: To Pitch..." command, using the \href{http://www.aaronalbin.com/praatr/}{PraatR} package
+	This function takes a soundfile, conducts an F0 analysis, and produces a Praat-format Pitch object using various customizable analysis parameters. As such, this function serves as a high-level interface to Praat's "Sound: To Pitch..." command, using the \href{http://www.aaronalbin.com/praatr/}{PraatR} package.
 }
 
 \usage{
@@ -73,7 +73,7 @@ ToPitch( Input,
 }
 
 \seealso{
-	To read the Pitch object textfile created by this function back into R, see \code{\link{ReadPitch}}.
+	To read the Pitch object textfile created by this function back into R, see \code{\link{ReadPitch}}. Note also that this function is used in the code for \code{\link{F0RangeFinder}} to perform the F0 analyses.
 }
 
 \examples{
