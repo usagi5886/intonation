@@ -30,7 +30,7 @@ This package has two other package dependencies you must install first.
 1. First, download the package [audio](https://cran.r-project.org/web/packages/audio/index.html) from CRAN, e.g. with:
     install.packages("audio").
 
-2. Second, install PraatR by going to the [PraatR homepage](http://www.aaronalbin.com/praatr/) and following the steps under "Installation".
+2. Second, install PraatR by going to the [PraatR homepage](http://www2.kobe-u.ac.jp/~albin/praatr/) and following the steps under "Installation".
 
 Now you can install this package by following these steps:
 
